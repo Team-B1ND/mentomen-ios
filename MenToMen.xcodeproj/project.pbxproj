@@ -11,8 +11,11 @@
 		93A4A0C82BCF63D3002A53D8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A4A0C72BCF63D3002A53D8 /* SceneDelegate.m */; };
 		93A4A0CB2BCF63D3002A53D8 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A4A0CA2BCF63D3002A53D8 /* MainVC.m */; };
 		93A4A0D02BCF63D4002A53D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A4A0CF2BCF63D4002A53D8 /* Assets.xcassets */; };
-		93A4A0D32BCF63D4002A53D8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93A4A0D22BCF63D4002A53D8 /* Base */; };
 		93A4A0D62BCF63D4002A53D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A4A0D52BCF63D4002A53D8 /* main.m */; };
+		93A4A0EC2BCF6939002A53D8 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A4A0EB2BCF6939002A53D8 /* BaseService.m */; };
+		93A4A0F02BCF6C06002A53D8 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A4A0EF2BCF6C06002A53D8 /* AuthService.m */; };
+		93A4A0F62BCF9118002A53D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4A0F52BCF9118002A53D8 /* LaunchScreen.xib */; };
+		93A4A0FD2BCF964B002A53D8 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4A0FC2BCF964B002A53D8 /* MainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +27,15 @@
 		93A4A0C92BCF63D3002A53D8 /* MainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		93A4A0CA2BCF63D3002A53D8 /* MainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		93A4A0CF2BCF63D4002A53D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93A4A0D22BCF63D4002A53D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93A4A0D42BCF63D4002A53D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A0D52BCF63D4002A53D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93A4A0E72BCF67B9002A53D8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		93A4A0EB2BCF6939002A53D8 /* BaseService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		93A4A0ED2BCF6947002A53D8 /* BaseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		93A4A0EF2BCF6C06002A53D8 /* AuthService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
+		93A4A0F12BCF6C0F002A53D8 /* AuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
+		93A4A0F52BCF9118002A53D8 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		93A4A0FC2BCF964B002A53D8 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A0CF2BCF63D4002A53D8 /* Assets.xcassets */,
-				93A4A0D12BCF63D4002A53D8 /* LaunchScreen.storyboard */,
+				93A4A0F52BCF9118002A53D8 /* LaunchScreen.xib */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 		93A4A0E22BCF64B8002A53D8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				93A4A0E82BCF68B2002A53D8 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -143,8 +152,44 @@
 			children = (
 				93A4A0C92BCF63D3002A53D8 /* MainVC.h */,
 				93A4A0CA2BCF63D3002A53D8 /* MainVC.m */,
+				93A4A0FC2BCF964B002A53D8 /* MainView.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		93A4A0E82BCF68B2002A53D8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				93A4A0E92BCF68B8002A53D8 /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		93A4A0E92BCF68B8002A53D8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				93A4A0F22BCF8DD3002A53D8 /* Post */,
+				93A4A0EE2BCF6B8D002A53D8 /* Auth */,
+				93A4A0ED2BCF6947002A53D8 /* BaseService.h */,
+				93A4A0EB2BCF6939002A53D8 /* BaseService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		93A4A0EE2BCF6B8D002A53D8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				93A4A0F12BCF6C0F002A53D8 /* AuthService.h */,
+				93A4A0EF2BCF6C06002A53D8 /* AuthService.m */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		93A4A0F22BCF8DD3002A53D8 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +249,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A4A0FD2BCF964B002A53D8 /* MainView.xib in Resources */,
+				93A4A0F62BCF9118002A53D8 /* LaunchScreen.xib in Resources */,
 				93A4A0D02BCF63D4002A53D8 /* Assets.xcassets in Resources */,
-				93A4A0D32BCF63D4002A53D8 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,22 +265,13 @@
 				93A4A0CB2BCF63D3002A53D8 /* MainVC.m in Sources */,
 				93A4A0C52BCF63D3002A53D8 /* AppDelegate.m in Sources */,
 				93A4A0D62BCF63D4002A53D8 /* main.m in Sources */,
+				93A4A0F02BCF6C06002A53D8 /* AuthService.m in Sources */,
 				93A4A0C82BCF63D3002A53D8 /* SceneDelegate.m in Sources */,
+				93A4A0EC2BCF6939002A53D8 /* BaseService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		93A4A0D12BCF63D4002A53D8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93A4A0D22BCF63D4002A53D8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		93A4A0D72BCF63D4002A53D8 /* Debug */ = {
@@ -365,8 +402,7 @@
 				INFOPLIST_FILE = MenToMen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "멘투멘";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.xib;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
@@ -394,8 +430,7 @@
 				INFOPLIST_FILE = MenToMen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "멘투멘";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.xib;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14;

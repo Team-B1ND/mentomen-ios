@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="VerticalLogo" translatesAutoresizingMaskIntoConstraints="NO" id="MR7-71-kq4">
+                    <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                    <color key="tintColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="5O8-tZ-Zvj"/>
+                        <constraint firstAttribute="height" constant="200" id="jVO-d7-S3w"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MR7-71-kq4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9rG-r6-E6d"/>
+                <constraint firstItem="MR7-71-kq4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zFw-ko-KVr"/>
+            </constraints>
+            <point key="canvasLocation" x="104.58015267175573" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="VerticalLogo" width="499" height="499"/>
+        <namedColor name="AccentColor">
+            <color red="0.15299999713897705" green="0.28600001335144043" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
